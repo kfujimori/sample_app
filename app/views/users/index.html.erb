@@ -1,0 +1,25 @@
+<% provide(:title, 'About Us') %>
+
+<div class="table-responsive">
+<table class="table table-striped table-bordered table-hover table-condensed">
+    <thead>
+        <tr>
+            <td>icon</td>
+            <td>id</td>
+            <td>name</td>
+            <td>email</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% @users.each do |u| %>
+            <tr>
+                <td><%= gravatar_for u %></td>
+                <td><%= u.id %></td>
+                <td><%= u.name %></td>
+                <td><%= u.email %></td>
+            </tr>
+        <% end %>
+
+    </tbody>
+</table>
+</div>
