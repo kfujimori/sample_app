@@ -67,6 +67,7 @@ GEM
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
     erubis (2.7.0)
+    excon (0.45.4)
     execjs (2.5.2)
     factory_girl (4.2.0)
       activesupport (>= 3.0.0)
@@ -90,6 +91,9 @@ GEM
       childprocess (>= 0.2.3)
       guard (>= 1.1)
       spork (>= 0.8.4)
+    heroku-api (0.3.23)
+      excon (~> 0.44)
+      multi_json (~> 1.8)
     hitimes (1.2.2)
     i18n (0.7.0)
     jbuilder (2.3.1)
@@ -245,6 +249,7 @@ DEPENDENCIES
   guard (= 2.6.1)
   guard-rspec (= 2.5.0)
   guard-spork (= 1.5.0)
+  heroku-api
   jbuilder (~> 2.0)
   jquery-rails
   libnotify (= 0.8.0)
