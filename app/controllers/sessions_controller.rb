@@ -13,8 +13,8 @@ class SessionsController < ApplicationController
         if user && user.authenticate(params[:session][:password])
             # success
             sign_in user
-            redirect_to user
-
+            # redirect to stored-location page if exists
+            redirect_back_or user
         else
             # fail. "now" enables to flash messages only once
             flash.now[:error] = 'Invalid email/password combination'
