@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-
+    # destroy user-microposts when user is destroied
+    has_many :microposts, dependent: :destroy
 
     #############################
     # preprocessing
@@ -49,6 +50,16 @@ class User < ActiveRecord::Base
     def User.encrypt(token)
         Digest::SHA1.hexdigest(token.to_s)
     end
+
+    #############################
+    # feed
+    #############################
+
+    def feed
+        # TODO:
+        Micropost.where("user_id=?", id)
+    end
+
 
     private
 

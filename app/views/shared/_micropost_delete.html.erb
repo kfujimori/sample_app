@@ -1,0 +1,6 @@
+<%= link_to    "delete",
+                deleting_post ,
+                method: :delete,
+                data: {confirm: "You sure(#{message_text})?"},
+                title: deleting_post.content
+%>
